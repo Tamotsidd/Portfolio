@@ -1,5 +1,9 @@
 # Siddhant Tamrakar — Portfolio
 
+## 🌐 [→ VIEW LIVE SITE ←](https://Tamotsidd.github.io/Portfolio)
+
+---
+
 Personal portfolio website built with pure HTML, CSS and vanilla JavaScript.
 
 ## What's inside
@@ -13,9 +17,6 @@ Personal portfolio website built with pure HTML, CSS and vanilla JavaScript.
 - HTML5
 - CSS3
 - Vanilla JavaScript
-
-## Live site
-https://Tamotsidd.github.io
 
 ## Contact
 tamotsidd7@gmail.com
