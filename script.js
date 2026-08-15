@@ -127,6 +127,23 @@ document.querySelectorAll('.proj-img img').forEach(img => {
   if (!img.complete || img.naturalWidth === 0) makePlaceholderFor(img);
 });
 
+// Same placeholder fallback for certificate thumbnails
+function makePlaceholderForCert(img) {
+  const card = img.closest('.cert-card');
+  const title = card?.querySelector('.cert-info h3')?.textContent?.trim() || 'Certificate';
+  const w = 1200, h = 825;
+  const bg1 = encodeURIComponent('#f5f3ee');
+  const bg2 = encodeURIComponent('#ece9e2');
+  const accent = encodeURIComponent('#c8401f');
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns='http://www.w3.org/2000/svg' width='${w}' height='${h}' viewBox='0 0 ${w} ${h}'>\n  <defs>\n    <linearGradient id='g2' x1='0' x2='1' y1='0' y2='1'>\n      <stop offset='0' stop-color='${bg1}'/>\n      <stop offset='1' stop-color='${bg2}'/>\n    </linearGradient>\n  </defs>\n  <rect width='100%' height='100%' fill='url(#g2)'/>\n  <text x='84' y='140' font-family='DM Sans, Arial, sans-serif' font-size='48' fill='%23000000' font-weight='700'>${title}</text>\n  <text x='84' y='190' font-family='DM Sans, Arial, sans-serif' font-size='18' fill='${accent}'>Certificate</text>\n</svg>`;
+  img.src = 'data:image/svg+xml;charset=utf8,' + encodeURIComponent(svg);
+  img.alt = title + ' placeholder';
+}
+document.querySelectorAll('.cert-img img').forEach(img => {
+  img.addEventListener('error', () => makePlaceholderForCert(img));
+  if (!img.complete || img.naturalWidth === 0) makePlaceholderForCert(img);
+});
+
 // 3D tilt on photo
 const slot = document.querySelector('.photo-slot');
 if (slot && window.innerWidth > 900) {
