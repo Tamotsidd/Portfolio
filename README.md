@@ -17,6 +17,7 @@ The website focuses on a clean, minimal, and user-friendly interface with smooth
 - Selected Work section
 - Interactive project navigation
 - Project showcase with external links
+- Certificate with pdf files of them
 - Contact section
 - Responsive design for different screen sizes
 - Smooth and intuitive user experience
