@@ -1,6 +1,6 @@
 # 🎨 Personal Portfolio Website
 
-> **Live Website:** https://tamotsidd.github.io/Portfolio/
+> **Live Website:** 
 
 A modern and responsive personal portfolio website designed to showcase my work, skills, experience, and creative projects as a UI/UX Designer.
 
